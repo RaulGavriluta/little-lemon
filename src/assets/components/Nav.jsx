@@ -3,8 +3,8 @@ import Logo from '../icons_assets/Logo.svg'
 
 const Nav = () => {
   return (
-    <nav className='flex justify-between font-bold px-10'>
-        <img src={Logo} className='px-10 '/>
+    <nav className='flex justify-between font-bold px-20'>
+        <img src={Logo} className='px-10'/>
         <ul className='flex'>
             <li className='p-5'><a href="#">Home</a></li>
             <li className='p-5'><a href="#">About</a></li>
