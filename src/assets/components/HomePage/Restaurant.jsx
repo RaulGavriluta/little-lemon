@@ -1,6 +1,6 @@
 import React from 'react'
-import OwnersA from '../icons_assets/OwnersA.jpg'
-import Ownersb from '../icons_assets/Ownersb.jpg'
+import OwnersA from '../../icons_assets/OwnersA.jpg'
+import Ownersb from '../../icons_assets/Ownersb.jpg'
 
 const Restaurant = () => {
   return (

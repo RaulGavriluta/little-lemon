@@ -1,8 +1,8 @@
 import React from 'react'
-import Button from './Button'
-import greeksalad from '../icons_assets/greeksalad.jpg'
-import bruchetta from '../icons_assets/bruchetta.svg'
-import lemondessert from '../icons_assets/lemondessert.jpg'
+import Button from '../Button'
+import greeksalad from '../../icons_assets/greeksalad.jpg'
+import bruchetta from '../../icons_assets/bruchetta.svg'
+import lemondessert from '../../icons_assets/lemondessert.jpg'
 import { MdDeliveryDining } from "react-icons/md";
 
 
@@ -14,7 +14,7 @@ const Main = () => {
         <Button href = "#" label = "Online Menu" />
       </div>
       <div className='flex justify-between px-60'>
-      <div className='drop-shadow-xl hover:drop-shadow-2xl transition duration-200'>
+      <article className='drop-shadow-xl hover:drop-shadow-2xl transition duration-200'>
         <div className='w-70 h-50 bg-cover bg-center rounded-t-2xl' style={{ backgroundImage: `url(${greeksalad})`}}></div>
           <div className='h-60 w-70 px-6 bg-[#EDEFEE]'>
             <div className='flex justify-between  py-4'>
@@ -27,8 +27,8 @@ const Main = () => {
               <MdDeliveryDining className='size-5'/>
             </div>
           </div>
-        </div>
-        <div className='drop-shadow-xl hover:drop-shadow-2xl transition duration-200'>
+        </article>
+        <article className='drop-shadow-xl hover:drop-shadow-2xl transition duration-200'>
         <div className='w-70 h-50 bg-cover bg-center rounded-t-2xl' style={{ backgroundImage: `url(${bruchetta})`}}></div>
           <div className='h-60 w-70 px-6 bg-[#EDEFEE]'>
             <div className='flex justify-between  py-4'>
@@ -41,8 +41,8 @@ const Main = () => {
               <MdDeliveryDining className='size-5'/>
             </div>
             </div>
-        </div>
-        <div className='drop-shadow-xl hover:drop-shadow-2xl transition duration-200'>
+        </article>
+        <article className='drop-shadow-xl hover:drop-shadow-2xl transition duration-200'>
         <div className='w-70 h-50 bg-cover bg-center rounded-t-2xl' style={{ backgroundImage: `url(${lemondessert})`}}></div>
           <div className='h-60 w-70 px-6 bg-[#EDEFEE]'>
             <div className='flex justify-between  py-4'>
@@ -55,7 +55,7 @@ const Main = () => {
               <MdDeliveryDining className='size-5'/>
             </div>
             </div>
-        </div>
+        </article>
       </div>
     </main>
   )
