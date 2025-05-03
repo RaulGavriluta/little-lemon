@@ -12,13 +12,13 @@ const Footer = () => {
               <li className='hover:text-[#F4CE14]'>
                 <Link to="/">Home</Link>
               </li>
-              <li><a href="#" className='hover:text-[#F4CE14]'>About</a></li>
+              <li className='hover:text-[#F4CE14]'>
+                <Link to="/about">About</Link>
+              </li>
               <li><a href="#" className='hover:text-[#F4CE14]'>Menu</a></li>
               <li className='hover:text-[#F4CE14]'>
                 <Link to="/booking">Reservations</Link>
               </li>
-              <li><a href="#" className='hover:text-[#F4CE14]'>Order Online</a></li>
-              <li><a href="#" className='hover:text-[#F4CE14]'>Login</a></li>
           </ul>
         </div>
         <div className='h-50'>

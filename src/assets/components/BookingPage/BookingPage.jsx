@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchAPI, submitAPI } from './api'; // Import both fetchAPI and submitAPI
+import { fetchAPI, submitAPI } from '../api'; // Import both fetchAPI and submitAPI
 import BookingForm from './BookingForm';
 import BookingSlot from './BookingSlot';
 import FAQ from './FAQ';

@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
-    <nav className='flex justify-between font-bold px-20'>
+    <nav className='flex justify-between font-bold px-55'>
         <img src={Logo} className='px-10'/>
         <ul className='flex'>
             <li className='p-5 hover:text-[#495E57] transition duration-200'>
               <Link to="/">Home</Link>
             </li>
-            <li className='p-5 hover:text-[#495E57] transition duration:200'><a href="#">About</a></li>
+            <li className='p-5 hover:text-[#495E57] transition duration-200'>
+              <Link to="/about">About</Link>
+            </li>
             <li className='p-5 hover:text-[#495E57] transition duration:200'><a href="#">Menu</a></li>
             <li className='p-5 hover:text-[#495E57] transition duration-200'>
               <Link to="/booking">Reservations</Link>
             </li>
-            <li className='p-5 hover:text-[#495E57] transition duration:200'><a href="#">Order Online</a></li>
-            <li className='p-5 hover:text-[#495E57] transition duration:200'><a href="#">Login</a></li>
         </ul>
     </nav>
   )
