@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../icons_assets/logo.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -8,10 +9,14 @@ const Footer = () => {
         <div className='h-50'>
           <h5 className='text-[#F4CE14] pb-2 '>Explore</h5>
           <ul>
-              <li><a href="#" className='hover:text-[#F4CE14]'>Home</a></li>
+              <li className='hover:text-[#F4CE14]'>
+                <Link to="/">Home</Link>
+              </li>
               <li><a href="#" className='hover:text-[#F4CE14]'>About</a></li>
               <li><a href="#" className='hover:text-[#F4CE14]'>Menu</a></li>
-              <li><a href="#" className='hover:text-[#F4CE14]'>Reservations</a></li>
+              <li className='hover:text-[#F4CE14]'>
+                <Link to="/booking">Reservations</Link>
+              </li>
               <li><a href="#" className='hover:text-[#F4CE14]'>Order Online</a></li>
               <li><a href="#" className='hover:text-[#F4CE14]'>Login</a></li>
           </ul>
