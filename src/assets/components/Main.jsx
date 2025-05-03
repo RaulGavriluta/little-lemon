@@ -8,8 +8,8 @@ import { MdDeliveryDining } from "react-icons/md";
 
 const Main = () => {
   return (
-    <main>
-      <div className='flex justify-between px-60 pt-25 pb-15'>
+    <main className='py-20'>
+      <div className='flex justify-between px-60  pb-15'>
         <h1 className='text-4xl font-bold pb-2'>This Week's Specials!</h1>
         <Button href = "#" label = "Online Menu" />
       </div>
