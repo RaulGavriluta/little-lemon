@@ -8,6 +8,7 @@ import Footer from './assets/components/Footer'
 import Home from "./assets/components/HomePage/Home";
 import BookingPage from './assets/components/BookingPage/BookingPage'
 import AboutPage from './assets/components/AboutPage/AboutPage'
+import MenuPage from './assets/components/MenuPage/MenuPage'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/menu" element={<MenuPage />} />
       </Routes>
       <Footer />
     </Router>

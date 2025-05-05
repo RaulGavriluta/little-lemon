@@ -5,3 +5,10 @@ body {
     font-optical-sizing: auto;
     font-style: normal;
   }
+
+@theme{
+  --color-brand-green: #495E57;
+  --color-brand-yellow: #F4CE14;
+  --color-brand-grey: #EDEFEE;
+  
+}  
