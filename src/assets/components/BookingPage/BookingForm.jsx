@@ -47,7 +47,7 @@ const BookingForm = ({ availableTimes, onDateChange, submitAPI }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="px-60 py-20 space-y-6 bg-[#495E57]">
+    <form onSubmit={handleSubmit} className="px-10 sm:px-30 lg:px-60 py-20 space-y-6 bg-[#495E57]">
       <div>
         <label htmlFor="res-date" className="block text-white">Choose date</label>
         <input
