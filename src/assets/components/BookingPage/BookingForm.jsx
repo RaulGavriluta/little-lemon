@@ -11,13 +11,11 @@ const BookingForm = ({ availableTimes, onDateChange, submitAPI }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if time is selected
     if (!time) {
       alert('Please select a valid time.');
       return;
     }
 
-    // Prepare the form data
     const formData = {
       date,
       time,
@@ -25,12 +23,19 @@ const BookingForm = ({ availableTimes, onDateChange, submitAPI }) => {
       occasion,
     };
 
-    console.log('Form Data Submitted:', formData); // Log the form data
-
     try {
-      const isSubmitted = await submitAPI(formData); // Call submitAPI passed as a prop
+      const isSubmitted = await submitAPI(formData); 
       if (isSubmitted) {
-        setMessage('Reservation successfully made!');
+        setMessage(
+          <p>
+            Reservation successfully made!
+            <br />
+            Your reservation is on{' '}
+            <span className="font-semibold text-brand-yellow">{date}</span>, at{' '}
+            <span className="font-semibold text-brand-yellow">{time}</span>, for{' '}
+            <span className="font-semibold text-brand-yellow">{guests}</span> persons.
+          </p>
+        );
       } else {
         setMessage('Something went wrong, please try again.');
       }
@@ -43,7 +48,7 @@ const BookingForm = ({ availableTimes, onDateChange, submitAPI }) => {
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
     setDate(selectedDate);
-    onDateChange(selectedDate); // Call onDateChange to update available times
+    onDateChange(selectedDate); 
   };
 
   return (
@@ -112,7 +117,7 @@ const BookingForm = ({ availableTimes, onDateChange, submitAPI }) => {
 
       {/* Show success or error message */}
       {message && (
-        <div className="mt-4 text-center text-white">
+        <div className="mt-4 text-white">
           {message}
         </div>
       )}
