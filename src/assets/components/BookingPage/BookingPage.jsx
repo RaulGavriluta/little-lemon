@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { fetchAPI, submitAPI } from '../api'; // Import both fetchAPI and submitAPI
-import BookingForm from './BookingForm';
-import BookingSlot from './BookingSlot';
+import { fetchAPI, submitAPI } from '../api';
 import FAQ from './FAQ';
+import BookingForm from './BookingForm'; // Ensure BookingForm is imported
 
 const BookingPage = () => {
   const [availableTimes, setAvailableTimes] = useState([]);
   const [selectedDate, setSelectedDate] = useState('');
 
-  // Function to fetch times from the global API
   const updateAvailableTimes = async (dateStr) => {
     try {
-      const times = await fetchAPI(new Date(dateStr)); // Use fetchAPI here
+      const times = await fetchAPI(new Date(dateStr));
       console.log('Fetched times:', times);
       setAvailableTimes(times || []);
     } catch (err) {
@@ -20,36 +18,24 @@ const BookingPage = () => {
     }
   };
 
-  // Initialize on page load
   useEffect(() => {
     const today = new Date().toISOString().split('T')[0];
     setSelectedDate(today);
-    updateAvailableTimes(today); // Fetch available times for today's date
+    updateAvailableTimes(today);
   }, []);
 
   const handleDateChange = (newDate) => {
     setSelectedDate(newDate);
-    updateAvailableTimes(newDate); // Fetch available times for the new selected date
+    updateAvailableTimes(newDate);
   };
 
   return (
-    <main>
-      <section className="grid grid-cols-3 gap-4 px-60 py-5">
-        {availableTimes.length > 0 ? (
-          availableTimes.map((time, idx) => (
-            <BookingSlot key={idx} time={time} status="available" />
-          ))
-        ) : (
-          <p className="text-center col-span-3 text-red-500">No available times.</p>
-        )}
-      </section>
-
+    <main className="">
       <BookingForm
         availableTimes={availableTimes}
         onDateChange={handleDateChange}
-        submitAPI={submitAPI} // Pass submitAPI as a prop to BookingForm
+        submitAPI={submitAPI}
       />
-
       <FAQ />
     </main>
   );
