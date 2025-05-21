@@ -14,7 +14,7 @@ const FAQ = () => {
       <div className="max-w-4xl mx-auto">
         <div className="border-b border-gray-300 py-4">
           <div 
-            className="cursor-pointer text-lg font-semibold"
+            className="cursor-pointer text-lg font-semibold lg:text-xl"
             onClick={() => toggleAnswer(0)}
           >
             How can I make a reservation?
@@ -28,7 +28,7 @@ const FAQ = () => {
 
         <div className="border-b border-gray-300 py-4">
           <div 
-            className="cursor-pointer text-lg font-semibold"
+            className="cursor-pointer text-lg font-semibold lg:text-xl"
             onClick={() => toggleAnswer(1)}
           >
             What is your cancellation policy?
@@ -40,17 +40,16 @@ const FAQ = () => {
           )}
         </div>
 
-        {/* Întrebarea 3 */}
         <div className="border-b border-gray-300 py-4">
           <div 
-            className="cursor-pointer text-lg font-semibold"
+            className="cursor-pointer text-lg font-semibold lg:text-xl"
             onClick={() => toggleAnswer(2)}
           >
             What are your operating hours?
           </div>
           {activeIndex === 2 && (
             <div className="text-sm text-brand-black mt-2">
-              Our restaurant is open every day from 11:00 AM to 10:00 PM. We are closed on public holidays.
+              Our restaurant is open every day from 11:00 AM to 12:00 PM. We are closed on public holidays.
             </div>
           )}
         </div>
