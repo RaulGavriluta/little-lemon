@@ -33,14 +33,14 @@ const Main = () => {
         <h1 className='text-2xl font-bold pb-6 md:text-3xl'>This Week's Specials!</h1>
         <Button href="#" label="Online Menu" />
       </div>
-      <div className='grid gap-15 md:grid-cols-2 lg:grid-cols-3'>
+      <div className='flex flex-wrap justify-center gap-15'>
         {specials.map((dishes) => (
           <article key={dishes.name} className='drop-shadow-xl hover:drop-shadow-2xl transition duration-200'>
             <div
-              className='h-68 w-76 bg-cover bg-center rounded-t-2xl md:w-70 lg:h-54'
+              className='h-62 w-76 bg-cover bg-center rounded-t-2xl lg:h-56'
               style={{ backgroundImage: `url(${dishes.image})` }}
             ></div>
-            <div className='h-68 w-76 px-6 pb-6 bg-brand-grey md:w-70 lg:h-54 lg:text-sm flex flex-col '>
+            <div className='h-68 w-76 px-6 pb-6 bg-brand-grey flex flex-col '>
               <div className='flex justify-between py-4'>
                 <h3 className='font-bold'>{dishes.name}</h3>
                 <span className='text-[#EE9972]'>{dishes.price}</span>
