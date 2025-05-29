@@ -24,7 +24,7 @@ const Nav = () => {
               <Link to="/menu">Menu</Link>
             </li>            
             <li className='p-4 hover:text-brand-green transition duration-200'>
-              <Link to="/booking">Reservations</Link>
+              <Link to="/booking"  >Reservations</Link>
             </li>
         </ul>
         <div onClick = {handleNav} className='block md:hidden'>
@@ -37,19 +37,20 @@ const Nav = () => {
         }>        
           <img src={Logo} className='m-4'/>
           <ul className='p-4'>
-              <li className='p-4 border-b border-b-brand-green hover:text-brand-green'>
-                <Link to="/">Home</Link>
-              </li>
-              <li className='p-4 border-b border-b-brand-green hover:text-brand-green'>
-                <Link to="/about">About</Link>
-              </li>
-              <li className='p-4 border-b border-b-brand-green hover:text-brand-green'>
-                <Link to="/menu">Menu</Link>
-              </li>            
-              <li className='p-4 hover:text-brand-green'>
-                <Link to="/booking">Reservations</Link>
-              </li>
-          </ul>
+            <li className='p-4 border-b border-b-brand-green hover:text-brand-green'>
+              <Link to="/" onClick={() => setNav(false)}>Home</Link>
+            </li>
+            <li className='p-4 border-b border-b-brand-green hover:text-brand-green'>
+              <Link to="/about" onClick={() => setNav(false)}>About</Link>
+            </li>
+            <li className='p-4 border-b border-b-brand-green hover:text-brand-green'>
+              <Link to="/menu" onClick={() => setNav(false)}>Menu</Link>
+            </li>            
+            <li className='p-4 hover:text-brand-green'>
+              <Link to="/booking" onClick={() => setNav(false)}>Reservations</Link>
+            </li>
+        </ul>
+
         </div>
     </nav>
   )
