@@ -29,7 +29,7 @@ const Nav = () => {
         </ul>
         <div onClick = {handleNav} className='block md:hidden'>
           {nav ? <AiOutlineClose size = {20} /> : <AiOutlineMenu size = {20}/>
- }
+        }
         </div>
         <div className={ nav 
         ? 'fixed top-0 left-0 w-[60%] h-full bg-white z-50 transition-transform duration-500 ease-in-out translate-x-0' 

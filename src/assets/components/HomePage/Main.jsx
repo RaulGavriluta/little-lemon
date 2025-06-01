@@ -31,7 +31,7 @@ const Main = () => {
     <main className='flex flex-col items-center py-20 px-15 '>
       <div className='flex flex-col items-center px-6 pb-15'>
         <h1 className='text-2xl font-bold pb-6 md:text-3xl'>This Week's Specials!</h1>
-        <Button href="#" label="Online Menu" />
+        <Button to = "/menu" label="Online Menu" />
       </div>
       <div className='flex flex-wrap justify-center gap-15'>
         {specials.map((dishes) => (
